@@ -29,7 +29,7 @@ pytestmark = pytest.mark.anyio
 
 
 @pytest.fixture
-ndef anyio_backend() -> str:
+def anyio_backend() -> str:
     return "asyncio"
 
 
