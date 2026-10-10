@@ -1,0 +1,90 @@
+# ---------------------------------------------------------------------------
+# gpsd-mcp — files that must never reach the repository
+# ---------------------------------------------------------------------------
+
+# Python bytecode / caches (local build + test artefacts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments (contain absolute local paths and installed packages)
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Packaging artefacts
+build/
+dist/
+sdist/
+wheels/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+
+# Test / coverage results (local test output)
+.pytest_cache/
+.tox/
+.nox/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+htmlcov/
+junit*.xml
+*.junit.xml
+test-results/
+nosetests.xml
+report.xml
+*.prof
+*.pstats
+
+# Type checkers / linters
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+.pytype/
+.pyre/
+
+# Secrets and local overrides — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+*.local.toml
+*.local.yaml
+*.local.yml
+
+# Local logs and databases
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# Editors / OS noise
+.idea/
+.vscode/
+!.vscode/mcp.json
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local scratch / dumps from manual gpsd probing
+scratch/
+tmp/
+*.tmp
